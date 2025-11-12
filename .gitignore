@@ -1,0 +1,70 @@
+# ===============================
+#  AudioPy Project - .gitignore
+# ===============================
+
+# ---- Python cache / temp ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.log
+
+# ---- Virtual Environments ----
+.env/
+.venv/
+venv/
+env/
+ENV/
+audioenv/
+# (any name you might use for your venv)
+
+# ---- Build & Packaging ----
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+MANIFEST
+
+# ---- Jupyter & Notebook Files ----
+.ipynb_checkpoints/
+*.ipynb_save
+*.nbconvert/
+*.nb.html
+
+# ---- IDE / Editor Files ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ---- AudioPy Output / Test Artifacts ----
+outputs/
+tests/__pycache__/
+*.wav
+*.mp3
+*.flac
+*.aiff
+*.ogg
+*.m4a
+*.au
+
+# ---- Dataset or Sample Audio (if any) ----
+datasets/
+samples/
+examples/inputs/
+examples/irs/
+examples/outputs/
+
+# ---- Dependency Lock & Reports ----
+poetry.lock
+Pipfile.lock
+*.bak
+*.tmp
+
+# ---- Coverage / Test Results ----
+.coverage
+htmlcov
