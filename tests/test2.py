@@ -12,8 +12,8 @@ from AudioPy.effects.time import time_stretch
 # from AudioPy.effects.pitch import pitch_shift
 
 # --- Demo configuration ---
-INPUT_PATH = r"Janam Janam_new Karaoke.mp3"  # <-- put a path here like r"C:\Users\Adarsh\Music\input.mp3"
-OUTPUT_DIR = "D:/Documents/College PICT/Sem7/B.E. Project/Project1/AudioPy/tests/output.wav"
+INPUT_PATH = r"Mere Samnewali Khidki Mein Happy Padosan 128 Kbps.mp3"  # <-- put a path here like r"C:\Users\Adarsh\Music\input.mp3"
+OUTPUT_DIR = "D:/Documents/College PICT/Sem7/B.E. Project/Project1/AudioPy/tests/output1.wav"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -29,17 +29,35 @@ def save_and_report(name, samples, sr):
     return out_path
 
 
-def plot_spectrogram(samples, sr, title="Spectrogram"):
-    S = np.abs(np.fft.rfft(samples))
-    freqs = np.fft.rfftfreq(len(samples), 1.0 / sr)
-    plt.figure(figsize=(6, 3))
-    plt.semilogy(freqs, S + 1e-9)
+def plot_spectrogram(samples, sr, title="Frequency Spectrum"):
+    """
+    Plot the frequency spectrum of an audio signal using FFT.
+
+    Parameters:
+    - samples : np.ndarray
+        Audio waveform (time-domain samples)
+    - sr : int
+        Sampling rate in Hz
+    - title : str
+        Title for the plot
+    """
+
+    # Step 1: Compute the Fast Fourier Transform (FFT)
+    S = np.abs(np.fft.rfft(samples))          # Magnitude spectrum
+    freqs = np.fft.rfftfreq(len(samples), 1.0 / sr)  # Frequency axis (Hz)
+
+    # Step 2: Create the plot
+    plt.figure(figsize=(8, 4))
+    plt.semilogy(freqs, S + 1e-9)  # log scale for amplitude (helps visibility)
+
+    # Step 3: Label the axes
     plt.title(title)
     plt.xlabel("Frequency (Hz)")
-    plt.tight_layout()
-    # show non-blocking if run in script; in notebooks this will display inline
-    plt.show()
+    plt.ylabel("Amplitude (log scale)")  # ✅ Added Y-axis label here
 
+    plt.grid(True, which='both', linestyle='--', alpha=0.5)
+    plt.tight_layout()
+    plt.show()
 
 def main():
     # --------- 0) Load or generate test audio ---------
@@ -55,7 +73,7 @@ def main():
     samples = np.asarray(samples, dtype=np.float32)
 
     # --------- 1) Trim ---------
-    start_s, end_s = 0.5, 2.5
+    start_s, end_s = 30.0, 60.5
     t_segment = trim(samples, sr, start_s, end_s)
     print(f"[Trim] Kept {start_s}s to {end_s}s → duration {len(t_segment)/sr:.2f}s (use case: extract speech segment)")
     save_and_report("demo_trim.wav", t_segment, sr)
