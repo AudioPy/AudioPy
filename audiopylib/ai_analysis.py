@@ -93,8 +93,12 @@ class AudioAnalyzer:
             raise RuntimeError("Pipeline not initialized")
         
         try:
-            # Use transformers pipeline directly on audio file
-            results = self.pipeline(audio_path, top_k=None)
+            # Load audio file using our own soundfile I/O helper
+            from .io import load
+            samples, sr = load(audio_path)
+            
+            # Pass raw samples directly to the transformers pipeline
+            results = self.pipeline({"raw": samples, "sampling_rate": sr}, top_k=None)
             
             return {
                 "model": self.model_name,

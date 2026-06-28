@@ -1,4 +1,4 @@
-# Testing AudioPy AI Analysis
+# Testing audiopylib AI Analysis
 
 ## Quick Start Test (Recommended)
 
@@ -19,7 +19,7 @@ python quick_test.py
 **Expected Output:**
 ```
 ============================================================
-AudioPy AI Analysis - Quick Test
+audiopylib AI Analysis - Quick Test
 ============================================================
 
 1️⃣  Creating test audio...
@@ -80,7 +80,7 @@ python examples/ai_analysis_examples.py
 ### 1. Install Dependencies
 
 ```bash
-# Basic installation (AudioPy core)
+# Basic installation (audiopylib core)
 pip install -e .
 
 # With AI analysis support
@@ -107,8 +107,8 @@ python tests/test_ai_analysis.py
 Create a simple test script:
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
-from AudioPy.io import load
+from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopylib.io import load
 
 # Load your audio
 samples, sr = load("your_audio.wav")
@@ -133,7 +133,7 @@ pip install transformers torch
 ### Issue: "CUDA out of memory"
 **Solution:** Use a smaller model
 ```python
-from AudioPy.ai_analysis import AudioAnalyzer
+from audiopylib.ai_analysis import AudioAnalyzer
 analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
 ```
 

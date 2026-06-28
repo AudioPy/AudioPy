@@ -1,4 +1,4 @@
-# audiopy/effects/time.py
+# audiopylib/effects/time.py
 from scipy.signal import resample
 
 def time_stretch(samples, rate):

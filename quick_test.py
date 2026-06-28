@@ -1,5 +1,5 @@
 """
-Quick Start Test - Run this to verify AudioPy AI Analysis works
+Quick Start Test - Run this to verify audiopylib AI Analysis works
 Execute: python quick_test.py
 """
 
@@ -8,6 +8,12 @@ import subprocess
 from pathlib import Path
 import tempfile
 import numpy as np
+
+# Force UTF-8 encoding on Windows to prevent UnicodeEncodeError with emojis
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # Add project to path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -24,16 +30,16 @@ def check_ffmpeg():
     except (subprocess.CalledProcessError, FileNotFoundError, OSError):
         return False
 
-from AudioPy.io import load, save
-from AudioPy.edit import normalize, fade
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.io import load, save
+from audiopylib.edit import normalize, fade
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 
 def quick_test():
     """Quick functionality test"""
     
     print("\n" + "="*60)
-    print("AudioPy AI Analysis - Quick Test")
+    print("audiopylib AI Analysis - Quick Test")
     print("="*60 + "\n")
     
     # Check FFmpeg

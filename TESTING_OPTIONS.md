@@ -1,8 +1,8 @@
-# 🧪 AudioPy AI Analysis - Complete Testing Options
+# 🧪 audiopylib AI Analysis - Complete Testing Options
 
 ## Overview
 
-AudioPy provides multiple ways to test your AI model with audio and video files:
+audiopylib provides multiple ways to test your AI model with audio and video files:
 
 | Tool | File | Type | Best For | Command |
 |------|------|------|----------|---------|
@@ -150,8 +150,8 @@ python interactive_test.py
 ```python
 import tempfile
 import subprocess
-from AudioPy.io import load
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.io import load
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 # Extract audio from MP4
 with tempfile.TemporaryDirectory() as tmpdir:
@@ -274,7 +274,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Or use smaller model:
-from AudioPy.ai_analysis import AudioAnalyzer
+from audiopylib.ai_analysis import AudioAnalyzer
 analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
 ```
 
@@ -288,7 +288,7 @@ Make sure the file is in a supported format:
 ### Console Output
 ```
 ======================================================================
-AudioPy AI Analysis - MP4 Audio Test
+audiopylib AI Analysis - MP4 Audio Test
 ======================================================================
 
 📁 Input File: video.mp4

@@ -1,4 +1,4 @@
-# AudioPy AI Analysis - Quick Reference Guide
+# audiopylib AI Analysis - Quick Reference Guide
 
 ## Installation
 
@@ -6,7 +6,7 @@
 pip install transformers torch
 ```
 
-Or install the full AudioPy package with AI capabilities:
+Or install the full audiopylib package with AI capabilities:
 ```bash
 pip install -e .
 ```
@@ -16,7 +16,7 @@ pip install -e .
 ### 1. Basic Sound Component Detection
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 # Initialize analyzer
 analyzer = SoundComponentExtractor(analysis_type="audio_tagging")
@@ -35,8 +35,8 @@ for sound, score in zip(sounds, scores):
 ### 2. Extract with Audio Features
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
-from AudioPy.io import load
+from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopylib.io import load
 
 # Load audio
 samples, sr = load("audio.wav")
@@ -61,7 +61,7 @@ print(f"MFCC Mean: {features['mfcc_mean']}")
 ### 3. Speech Recognition
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 analyzer = SoundComponentExtractor(analysis_type="speech_recognition")
 results = analyzer.extract_components("speech.wav")
@@ -82,7 +82,7 @@ print(f"Transcription: {transcription}")
 ## Using Custom Models
 
 ```python
-from AudioPy.ai_analysis import AudioAnalyzer
+from audiopylib.ai_analysis import AudioAnalyzer
 
 # Use any HuggingFace model
 analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
@@ -92,7 +92,7 @@ results = analyzer.analyze_audio("audio.wav")
 ## Private Models with API Key
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 analyzer = SoundComponentExtractor(
     analysis_type="audio_tagging",
@@ -105,7 +105,7 @@ results = analyzer.extract_components("audio.wav")
 ## Batch Processing
 
 ```python
-from AudioPy.ai_analysis import SoundComponentExtractor
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 analyzer = SoundComponentExtractor(analysis_type="audio_tagging")
 audio_files = ["audio1.wav", "audio2.wav", "audio3.wav"]
@@ -122,9 +122,9 @@ for audio_file in audio_files:
 ## Integration with Audio Editing
 
 ```python
-from AudioPy.io import load, save
-from AudioPy.ai_analysis import SoundComponentExtractor
-from AudioPy.edit import normalize, fade
+from audiopylib.io import load, save
+from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopylib.edit import normalize, fade
 
 # Load audio
 samples, sr = load("audio.wav")
@@ -207,4 +207,4 @@ analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
 ## More Information
 
 For more examples, see: `examples/ai_analysis_examples.py`
-For detailed API docs, see docstrings in: `AudioPy/ai_analysis.py`
+For detailed API docs, see docstrings in: `audiopylib/ai_analysis.py`

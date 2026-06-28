@@ -1,8 +1,12 @@
 # examples/demo_process.py
-from audiopy.io import load, save
-from audiopy.edit import trim, normalize, fade, concat, apply_gain
-from audiopy.effects.reverb import reverb
-from audiopy.effects.filters import butter_lowpass, apply_sos_filter
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from audiopylib.io import load, save
+from audiopylib.edit import trim, normalize, fade, concat, apply_gain
+from audiopylib.effects.reverb import reverb
+from audiopylib.effects.filters import butter_lowpass, apply_sos_filter
 import numpy as np
 
 s, sr = load("inputs/lecture.wav")               # 1) load

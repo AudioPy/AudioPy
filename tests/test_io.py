@@ -4,7 +4,7 @@ import soundfile as sf
 import tempfile
 import os
 
-from AudioPy.io import load, save
+from audiopylib.io import load, save
 
 
 def generate_sine_wave(freq=440, sr=22050, duration=1.0, amplitude=0.5):

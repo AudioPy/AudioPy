@@ -1,10 +1,10 @@
-# AudioPy Setup Guide
+# audiopylib Setup Guide
 
 ## System Requirements
 
 ### FFmpeg (Required)
 
-AudioPy uses `soundfile` which requires FFmpeg to load audio files.
+audiopylib uses `soundfile` which requires FFmpeg to load audio files.
 
 #### Windows Installation
 
@@ -74,12 +74,12 @@ pip install -e .
 ### 1. Install FFmpeg (System-wide)
 See instructions above for your OS.
 
-### 2. Clone or Download AudioPy
+### 2. Clone or Download audiopylib
 ```bash
 cd c:\Users\LALIT\Documents\Codes\projects\AudioPy
 ```
 
-### 3. Install AudioPy and Dependencies
+### 3. Install audiopylib and Dependencies
 ```bash
 # Option A: Minimal
 pip install numpy scipy soundfile
@@ -121,7 +121,7 @@ pip install librosa
 ### Error: "CUDA out of memory" (GPU errors)
 **Solution:** Use a smaller model
 ```python
-from AudioPy.ai_analysis import AudioAnalyzer
+from audiopylib.ai_analysis import AudioAnalyzer
 analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
 ```
 
@@ -143,7 +143,7 @@ winget install FFmpeg
 # 3. Install Python dependencies
 pip install numpy scipy soundfile transformers torch librosa
 
-# 4. Navigate to AudioPy
+# 4. Navigate to audiopylib
 cd c:\Users\LALIT\Documents\Codes\projects\AudioPy
 
 # 5. Test installation
@@ -184,7 +184,7 @@ python quick_test.py
 Expected output:
 ```
 ============================================================
-AudioPy AI Analysis - Quick Test
+audiopylib AI Analysis - Quick Test
 ============================================================
 
 1️⃣  Creating test audio...
@@ -234,7 +234,7 @@ After successful installation:
 
 ## Testing with MP4 Files
 
-AudioPy can analyze audio extracted from MP4 video files.
+audiopylib can analyze audio extracted from MP4 video files.
 
 ### Quick Test (Creates Synthetic Audio)
 ```bash
@@ -255,7 +255,7 @@ python test_mp4_analysis.py sample_video.mp4
 
 ```
 ======================================================================
-AudioPy AI Analysis - MP4 Audio Test
+audiopylib AI Analysis - MP4 Audio Test
 ======================================================================
 
 📁 Input File: sample_video.mp4

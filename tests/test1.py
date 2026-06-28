@@ -1,6 +1,10 @@
 # Step 1: Import required modules
-from AudioPy.io import load, save
-from AudioPy.edit import trim
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from audiopylib.io import load, save
+from audiopylib.edit import trim
 import os
 
 # Step 2: Specify the full path to your audio file

@@ -1,4 +1,4 @@
-# 📚 AudioPy Testing Suite - Complete Index
+# 📚 audiopylib Testing Suite - Complete Index
 
 ## 🎯 Start Here
 
@@ -15,7 +15,7 @@ Choose your experience level:
 ### 🧑‍💻 **I'm a Developer**
 👉 **Read:** [AI_ANALYSIS_GUIDE.md](AI_ANALYSIS_GUIDE.md)
 👉 **Run:** `python tests/test_core.py`
-👉 **Code:** [AudioPy/ai_analysis.py](AudioPy/ai_analysis.py)
+👉 **Code:** [audiopylib/ai_analysis.py](audiopylib/ai_analysis.py)
 
 ---
 
@@ -107,7 +107,7 @@ python simple_usage_example.py
 - Different analysis types
 - Integration patterns
 
-**When to use:** Learning how to use AudioPy
+**When to use:** Learning how to use audiopylib
 
 ### 5️⃣ Unit Tests (Comprehensive)
 ```bash
@@ -171,7 +171,7 @@ python tests/test_core.py
 ### Developer Path
 ```
 1. Read: AI_ANALYSIS_GUIDE.md
-2. Explore: AudioPy/ai_analysis.py
+2. Explore: audiopylib/ai_analysis.py
 3. Run: python tests/test_core.py
 4. Code: examples/ai_analysis_examples.py
 5. Integrate: Use in your project
@@ -180,7 +180,7 @@ python tests/test_core.py
 ### Integration Path
 ```
 1. Install: pip install transformers torch
-2. Import: from AudioPy.ai_analysis import SoundComponentExtractor
+2. Import: from audiopylib.ai_analysis import SoundComponentExtractor
 3. Initialize: analyzer = SoundComponentExtractor()
 4. Analyze: results = analyzer.extract_components("audio.wav")
 5. Deploy: Use in production
@@ -215,7 +215,7 @@ python tests/test_core.py
 👉 [SETUP.md](SETUP.md) → Section: "Troubleshooting"
 👉 Command: `python interactive_test.py` (option 6)
 
-### "I want to use AudioPy in my code"
+### "I want to use audiopylib in my code"
 👉 [AI_ANALYSIS_GUIDE.md](AI_ANALYSIS_GUIDE.md) → Section: "Quick Start"
 👉 File: [examples/ai_analysis_examples.py](examples/ai_analysis_examples.py)
 
@@ -268,7 +268,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 ## 📚 File Organization
 
 ```
-AudioPy/
+audiopylib/
 ├── 📋 Documentation
 │   ├── README_TESTING.md          ← Project overview
 │   ├── TESTING_QUICK_START.md     ← 5-min quickstart
@@ -289,7 +289,7 @@ AudioPy/
 │   └── examples/ai_analysis_examples.py  ← 8 examples
 │
 ├── 🎵 Main Library
-│   └── AudioPy/
+│   └── audiopylib/
 │       ├── ai_analysis.py         ← AI analyzer
 │       ├── io.py                  ← Load/save
 │       ├── edit.py                ← Editing functions
@@ -342,4 +342,4 @@ python simple_usage_example.py
 
 ---
 
-**Created:** February 2026 | **AudioPy v0.1.0** | **Status:** ✅ Ready to Test
+**Created:** February 2026 | **audiopylib v0.1.3** | **Status:** ✅ Ready to Test

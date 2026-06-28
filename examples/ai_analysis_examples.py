@@ -3,8 +3,8 @@ Example 1: Basic Audio Component Analysis
 Demonstrates how to use AudioAnalyzer for sound component extraction
 """
 
-from AudioPy.ai_analysis import AudioAnalyzer, SoundComponentExtractor
-from AudioPy.io import load, save
+from audiopylib.ai_analysis import AudioAnalyzer, SoundComponentExtractor
+from audiopylib.io import load, save
 import json
 
 
@@ -152,7 +152,7 @@ def example_7_batch_processing():
 def example_8_integration_with_edit():
     """Example: Combine AI analysis with audio editing"""
     
-    from AudioPy.edit import trim, normalize, apply_gain
+    from audiopylib.edit import trim, normalize, apply_gain
     
     # Load audio
     samples, sr = load("path/to/your/audio.wav")
@@ -174,7 +174,7 @@ def example_8_integration_with_edit():
     processed = normalize(samples)
     
     # Apply fade for smooth transitions
-    from AudioPy.edit import fade
+    from audiopylib.edit import fade
     processed = fade(processed, sr, fade_in_s=1.0, fade_out_s=1.0)
     
     # Save processed audio

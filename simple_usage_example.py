@@ -1,19 +1,26 @@
 """
 Simple Usage Example - Copy and Paste Ready!
-Run this file to see AudioPy in action
+Run this file to see audiopylib in action
 
 python simple_usage_example.py
 """
 
+import sys
 import json
 from pathlib import Path
 import tempfile
 import numpy as np
 
-# Import AudioPy
-from AudioPy.io import load, save
-from AudioPy.edit import normalize, fade
-from AudioPy.ai_analysis import SoundComponentExtractor
+# Force UTF-8 encoding on Windows to prevent UnicodeEncodeError with emojis
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+# Import audiopylib
+from audiopylib.io import load, save
+from audiopylib.edit import normalize, fade
+from audiopylib.ai_analysis import SoundComponentExtractor
 
 
 def example_1_basic_analysis():
@@ -180,7 +187,7 @@ def example_5_editing_and_analysis():
 def main():
     """Run all examples"""
     print("\n" + "="*70)
-    print("AudioPy Simple Usage Examples")
+    print("audiopylib Simple Usage Examples")
     print("="*70)
     
     try:
@@ -207,8 +214,8 @@ def main():
         print("      python test_mp4_analysis.py your_video.mp4")
         print("\n   2. Use the interactive tool:")
         print("      python interactive_test.py")
-        print("\n   3. Integrate AudioPy into your project:")
-        print("      from AudioPy.ai_analysis import SoundComponentExtractor")
+        print("\n   3. Integrate audiopylib into your project:")
+        print("      from audiopylib.ai_analysis import SoundComponentExtractor")
         print("      analyzer = SoundComponentExtractor()")
         print("      results = analyzer.extract_components('audio.wav')")
         print("\n📖 Documentation: Check AI_ANALYSIS_GUIDE.md for detailed API\n")

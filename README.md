@@ -1,7 +1,7 @@
-# AudioPy 🎧
+# audiopylib 🎧
 ### Open-Source Framework for Intelligent Audio Editing (DSP + AI)
 
-AudioPy is a unified Python framework for intelligent audio processing that combines traditional Digital Signal Processing (DSP) with modern AI/ML models.
+audiopylib is a unified Python framework for intelligent audio processing that combines traditional Digital Signal Processing (DSP) with modern AI/ML models.
 
 It simplifies complex audio tasks like noise reduction, speech recognition, audio classification, and more — all through a clean and consistent API.
 
@@ -25,4 +25,4 @@ It simplifies complex audio tasks like noise reduction, speech recognition, audi
 ## 📦 Installation
 
 ```bash
-pip install audiopy
+pip install audiopylib

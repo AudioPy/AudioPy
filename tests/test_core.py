@@ -12,8 +12,8 @@ import numpy as np
 # Add project to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from AudioPy.io import load, save
-from AudioPy.edit import (
+from audiopylib.io import load, save
+from audiopylib.edit import (
     trim, concat, apply_gain, rms_db, normalize, fade, reverse
 )
 
@@ -106,10 +106,10 @@ class TestAudioEditing(unittest.TestCase):
         self.assertEqual(len(faded), len(self.samples))
         
         # Start should be low (fade in)
-        self.assertLess(np.abs(faded[0]), np.abs(self.samples[0]))
+        self.assertLess(np.abs(faded[10]), np.abs(self.samples[10]))
         
         # End should be low (fade out)
-        self.assertLess(np.abs(faded[-1]), np.abs(self.samples[-1]))
+        self.assertLess(np.abs(faded[-10]), np.abs(self.samples[-10]))
     
     def test_reverse(self):
         """Test reverse function"""
@@ -128,14 +128,14 @@ class TestAIAnalysis(unittest.TestCase):
     def test_imports(self):
         """Test that AI analysis modules can be imported"""
         try:
-            from AudioPy.ai_analysis import AudioAnalyzer, SoundComponentExtractor
+            from audiopylib.ai_analysis import AudioAnalyzer, SoundComponentExtractor
             self.assertTrue(True, "Import successful")
         except ImportError as e:
             self.fail(f"Failed to import AI analysis: {e}")
     
     def test_analyzer_class_exists(self):
         """Test that analyzer classes exist"""
-        from AudioPy.ai_analysis import AudioAnalyzer, SoundComponentExtractor
+        from audiopylib.ai_analysis import AudioAnalyzer, SoundComponentExtractor
         self.assertTrue(hasattr(AudioAnalyzer, '__init__'))
         self.assertTrue(hasattr(SoundComponentExtractor, '__init__'))
 
