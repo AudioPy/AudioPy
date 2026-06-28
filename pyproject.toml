@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "audiopylib"
-version = "0.1.4"
+version = "0.1.5"
 description = "A generalised Python library for audio editing and effects with AI-powered analysis, inspired by OpenCV."
 authors = [
     { name = "Adarsh Kotawar", email = "adarshkotawar@gmail.com" }
@@ -12,12 +12,13 @@ authors = [
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
-keywords = ["audio", "dsp", "signal-processing", "ai", "speech-recognition"]
+keywords = ["audio", "dsp", "signal-processing", "ai", "speech-recognition", "audio-editing", "audio-effects", "huggingface", "transformers", "whisper", "deep-learning", "reverb", "equalizer"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Operating System :: OS Independent",
     "Topic :: Multimedia :: Sound/Audio",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
@@ -37,7 +38,10 @@ advanced = ["librosa>=0.9.0"]
 
 [project.urls]
 Homepage = "https://github.com/AudioPy/AudioPy"
+Repository = "https://github.com/AudioPy/AudioPy.git"
+Documentation = "https://github.com/AudioPy/AudioPy/blob/main/README.md"
 Issues = "https://github.com/AudioPy/AudioPy/issues"
+Changelog = "https://github.com/AudioPy/AudioPy/releases"
 
 # This tells setuptools where to find packages
 [tool.setuptools.packages.find]
