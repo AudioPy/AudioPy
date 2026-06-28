@@ -1,0 +1,53 @@
+# audiopy requirements
+# Core audio I/O and processing
+librosa>=0.10.0
+soundfile>=0.12.0
+sounddevice>=0.4.6
+
+# Numerical computing
+numpy>=1.23.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Signal processing
+scipy>=1.10.0
+
+# Deep learning — HuggingFace models (Whisper, AST, Wav2Vec2, SpeechT5)
+transformers>=4.38.0
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Audio noise reduction (spectral gating)
+noisereduce>=3.0.0
+
+# Audio effects (reverb, chorus, etc.)
+pedalboard>=0.8.0
+
+# Text-to-Speech (Google TTS)
+gTTS>=2.3.0
+
+# HTTP downloads (from_url)
+requests>=2.28.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Optional / Heavy Dependencies
+# Install these extras for specific features:
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Source separation (separate_vocals, separate_instruments)
+# pip install audiopy[separation]
+# demucs>=4.0.0
+# spleeter>=2.3.0
+
+# WebRTC Voice Activity Detection (remove_silence)
+# pip install audiopy[vad]
+# webrtcvad>=2.0.10
+
+# DeepFilterNet for deep neural denoising (denoise_deep)
+# pip install audiopy[deepfilter]
+# deepfilternet>=0.5.0
+
+# HuggingFace Datasets for SpeechT5 speaker embeddings (speak_advanced)
+# pip install audiopy[advanced_tts]
+# datasets>=2.14.0
