@@ -82,7 +82,7 @@ except ImportError:
     AudioAnalyzer = None
     SoundComponentExtractor = None
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 __author__ = "audiopylib Team"
 
 __all__ = [
