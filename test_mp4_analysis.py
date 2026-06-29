@@ -1,5 +1,5 @@
 """
-Test audiopylib AI Model with MP4 Files
+Test audiopy_ai AI Model with MP4 Files
 Upload an MP4 file and see the AI-powered sound component analysis
 
 Usage:
@@ -26,8 +26,8 @@ if sys.platform == 'win32':
 # Add project to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from audiopylib.io import load, save
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.io import load, save
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 
 
 def extract_audio_from_mp4(mp4_path: str, output_wav_path: str) -> bool:
@@ -101,7 +101,7 @@ def analyze_mp4_audio(mp4_path: str, analysis_type: str = "audio_tagging") -> di
         return None
     
     print(f"\n{'='*70}")
-    print(f"audiopylib AI Analysis - MP4 Audio Test")
+    print(f"audiopy_ai AI Analysis - MP4 Audio Test")
     print(f"{'='*70}\n")
     
     print(f"📁 Input File: {mp4_path.name}")
@@ -268,7 +268,7 @@ def main():
         mp4_file = sys.argv[1]
     else:
         print("\n" + "="*70)
-        print("🎬 audiopylib MP4 Audio Analysis Test")
+        print("🎬 audiopy_ai MP4 Audio Analysis Test")
         print("="*70 + "\n")
         print("Usage: python test_mp4_analysis.py <mp4_file>\n")
         print("Example: python test_mp4_analysis.py video.mp4\n")

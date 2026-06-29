@@ -1,4 +1,4 @@
-# audiopylib/io.py
+# audiopy_ai/io.py
 import soundfile as sf
 import numpy as np
 

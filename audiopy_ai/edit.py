@@ -1,4 +1,4 @@
-# audiopylib/edit.py
+# audiopy_ai/edit.py
 import numpy as np
 
 def trim(samples, sr, start_s, end_s):

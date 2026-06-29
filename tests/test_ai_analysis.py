@@ -14,9 +14,9 @@ import warnings
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from audiopylib.io import load, save
-from audiopylib.edit import normalize, fade, apply_gain
-from audiopylib.ai_analysis import AudioAnalyzer, SoundComponentExtractor
+from audiopy_ai.io import load, save
+from audiopy_ai.edit import normalize, fade, apply_gain
+from audiopy_ai.ai_analysis import AudioAnalyzer, SoundComponentExtractor
 
 
 class Colors:
@@ -84,24 +84,24 @@ def test_imports():
     print_header("TEST 1: Module Imports")
     
     try:
-        from audiopylib.io import load, save
-        print_success("audiopylib.io imported successfully")
+        from audiopy_ai.io import load, save
+        print_success("audiopy_ai.io imported successfully")
     except ImportError as e:
-        print_error(f"Failed to import audiopylib.io: {e}")
+        print_error(f"Failed to import audiopy_ai.io: {e}")
         return False
     
     try:
-        from audiopylib.edit import normalize, fade, apply_gain
-        print_success("audiopylib.edit imported successfully")
+        from audiopy_ai.edit import normalize, fade, apply_gain
+        print_success("audiopy_ai.edit imported successfully")
     except ImportError as e:
-        print_error(f"Failed to import audiopylib.edit: {e}")
+        print_error(f"Failed to import audiopy_ai.edit: {e}")
         return False
     
     try:
-        from audiopylib.ai_analysis import AudioAnalyzer, SoundComponentExtractor
-        print_success("audiopylib.ai_analysis imported successfully")
+        from audiopy_ai.ai_analysis import AudioAnalyzer, SoundComponentExtractor
+        print_success("audiopy_ai.ai_analysis imported successfully")
     except ImportError as e:
-        print_error(f"Failed to import audiopylib.ai_analysis: {e}")
+        print_error(f"Failed to import audiopy_ai.ai_analysis: {e}")
         return False
     
     return True

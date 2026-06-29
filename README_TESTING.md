@@ -1,6 +1,6 @@
-# 🎵 audiopylib - AI-Powered Audio Analysis Library
+# 🎵 audiopy_ai - AI-Powered Audio Analysis Library
 
-audiopylib is a Python library for audio processing with AI-powered sound component analysis using HuggingFace models. Just like OpenCV for images, audiopylib is a comprehensive library for working with audio.
+audiopy_ai is a Python library for audio processing with AI-powered sound component analysis using HuggingFace models. Just like OpenCV for images, audiopy_ai is a comprehensive library for working with audio.
 
 ## ✨ Features
 
@@ -41,8 +41,8 @@ python test_mp4_analysis.py video.mp4
 
 ### 3. Use in Your Code
 ```python
-from audiopylib.ai_analysis import SoundComponentExtractor
-from audiopylib.io import load
+from audiopy_ai.ai_analysis import SoundComponentExtractor
+from audiopy_ai.io import load
 
 # Analyze an audio file
 analyzer = SoundComponentExtractor(analysis_type="audio_tagging")
@@ -113,7 +113,7 @@ All tools save results to `video_name_analysis.json` or similar.
 
 ### Basic Audio Analysis
 ```python
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 
 analyzer = SoundComponentExtractor(analysis_type="audio_tagging")
 results = analyzer.extract_components("audio.wav")
@@ -121,7 +121,7 @@ results = analyzer.extract_components("audio.wav")
 
 ### With Audio Features
 ```python
-from audiopylib.io import load
+from audiopy_ai.io import load
 
 samples, sr = load("audio.wav")
 results = analyzer.extract_components_with_features(
@@ -172,8 +172,8 @@ See [examples/ai_analysis_examples.py](examples/ai_analysis_examples.py) for mor
 ## 📦 Project Structure
 
 ```
-audiopylib/
-├── audiopylib/
+audiopy_ai/
+├── audiopy_ai/
 │   ├── __init__.py
 │   ├── ai_analysis.py        # AI-powered analysis
 │   ├── io.py                 # Load/save audio

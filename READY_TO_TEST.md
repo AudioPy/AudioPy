@@ -1,4 +1,4 @@
-# ✅ audiopylib Testing Suite - Complete Setup Summary
+# ✅ audiopy_ai Testing Suite - Complete Setup Summary
 
 ## 🎉 What Has Been Created
 
@@ -169,9 +169,9 @@ README_TESTING.md               ← Feature overview
 
 ### Project Files
 ```
-audiopylib/ai_analysis.py          ← Main AI module
-audiopylib/io.py                   ← Load/save functions
-audiopylib/edit.py                 ← Editing functions
+audiopy_ai/ai_analysis.py          ← Main AI module
+audiopy_ai/io.py                   ← Load/save functions
+audiopy_ai/edit.py                 ← Editing functions
 examples/ai_analysis_examples.py ← 8 code examples
 ```
 
@@ -237,7 +237,7 @@ Everything is set up. You can now:
 
 4. **Integrate into your project:**
    ```python
-   from audiopylib.ai_analysis import SoundComponentExtractor
+   from audiopy_ai.ai_analysis import SoundComponentExtractor
    analyzer = SoundComponentExtractor()
    results = analyzer.extract_components("audio.wav")
    ```

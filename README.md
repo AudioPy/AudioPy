@@ -1,12 +1,12 @@
-# audiopylib 🎧
+# audiopy_ai 🎧
 
-[![PyPI Version](https://img.shields.io/pypi/v/audiopylib.svg)](https://pypi.org/project/audiopylib/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/audiopylib.svg)](https://pypi.org/project/audiopylib/)
-[![License](https://img.shields.io/pypi/l/audiopylib.svg)](https://pypi.org/project/audiopylib/)
+[![PyPI Version](https://img.shields.io/pypi/v/audiopy_ai.svg)](https://pypi.org/project/audiopy_ai/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/audiopy_ai.svg)](https://pypi.org/project/audiopy_ai/)
+[![License](https://img.shields.io/pypi/l/audiopy_ai.svg)](https://pypi.org/project/audiopy_ai/)
 
 **Open-Source Framework for Intelligent Audio Editing (DSP + AI) — inspired by OpenCV, but designed for audio.**
 
-`audiopylib` is a unified Python library that seamlessly bridges the gap between traditional Digital Signal Processing (DSP) and modern deep-learning-based AI analysis. It enables developers to load, manipulate, filter, stretch, and analyze audio files via a clean, high-performance, and consistent API.
+`audiopy_ai` is a unified Python library that seamlessly bridges the gap between traditional Digital Signal Processing (DSP) and modern deep-learning-based AI analysis. It enables developers to load, manipulate, filter, stretch, and analyze audio files via a clean, high-performance, and consistent API.
 
 ---
 
@@ -30,19 +30,19 @@
 ### 1. Core Install (DSP & I/O)
 
 ```bash
-pip install audiopylib
+pip install audiopy_ai
 ```
 
 ### 2. Advanced Install (With Librosa for Feature Extraction)
 
 ```bash
-pip install audiopylib[advanced]
+pip install audiopy_ai[advanced]
 ```
 
 ### ⚡ System Requirements
 
 - **Python**: `>= 3.9`
-- **FFmpeg**: Required for decoding compressed formats (MP3, M4A, etc.) and video analysis. `audiopylib` automatically searches standard environment directories, Winget packages, and Scoop shims to configure FFmpeg on import.
+- **FFmpeg**: Required for decoding compressed formats (MP3, M4A, etc.) and video analysis. `audiopy_ai` automatically searches standard environment directories, Winget packages, and Scoop shims to configure FFmpeg on import.
 
 ---
 
@@ -51,7 +51,7 @@ pip install audiopylib[advanced]
 Here is a simple example showing how to load a file, normalize it, apply a fade, and run AI-based classification on it:
 
 ```python
-import audiopylib as ap
+import audiopy_ai as ap
 
 # 1. Load audio file (WAV, MP3, etc.)
 samples, sr = ap.load("input.wav")
@@ -151,37 +151,37 @@ volume_db = ap.rms_db(samples)
 
 ### 🎚️ Effects Submodule
 
-#### Filters (`audiopylib.effects.filters`)
+#### Filters (`audiopy_ai.effects.filters`)
 
 - `butter_lowpass(sr, cutoff_hz, order=4)`: Generates low-pass filter coefficients.
 - `butter_highpass(sr, cutoff_hz, order=4)`: Generates high-pass filter coefficients.
 - `apply_sos_filter(samples, sos)`: Applies the generated filter coefficients (SOS format) to the audio.
 
 ```python
-from audiopylib.effects.filters import butter_lowpass, apply_sos_filter
+from audiopy_ai.effects.filters import butter_lowpass, apply_sos_filter
 
 # Filter high frequencies out above 1000Hz
 sos = butter_lowpass(sr, cutoff_hz=1000)
 filtered = apply_sos_filter(samples, sos)
 ```
 
-#### Reverb (`audiopylib.effects.reverb`)
+#### Reverb (`audiopy_ai.effects.reverb`)
 
 - `reverb(samples, ir, wet=0.3)`: Applies a convolution-based reverb effect using an Impulse Response (IR) audio array.
 
 ```python
-from audiopylib.effects.reverb import reverb
+from audiopy_ai.effects.reverb import reverb
 
 # ir_samples is another audio array loaded from a reverb room impulse response file
 wet_audio = reverb(samples, ir_samples, wet=0.4)
 ```
 
-#### Time stretching (`audiopylib.effects.time`)
+#### Time stretching (`audiopy_ai.effects.time`)
 
 - `time_stretch(samples, rate)`: Changes the playback speed of the audio without pitch shift (using resampling). `rate > 1.0` speeds it up, while `rate < 1.0` slows it down.
 
 ```python
-from audiopylib.effects.time import time_stretch
+from audiopy_ai.effects.time import time_stretch
 
 fast_audio = time_stretch(samples, rate=1.5)
 ```
@@ -196,7 +196,7 @@ Initializes the HuggingFace-backed pipeline analyzer.
 - **Audio Tagging models**: `superb/hubert-base-superb-ks` (keyword spotting)
 
 ```python
-from audiopylib.ai_analysis import AudioAnalyzer
+from audiopy_ai.ai_analysis import AudioAnalyzer
 
 analyzer = AudioAnalyzer(model_name="openai/whisper-base")
 results = analyzer.analyze_audio("speech.wav")
@@ -207,7 +207,7 @@ print("Transcribed Text:", results["components"]["metadata"]["transcription"])
 Simplified helper wrapper for executing AI analyses.
 
 ```python
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 
 # Instantiate for Sound Event detection
 extractor = SoundComponentExtractor(analysis_type="audio_tagging")

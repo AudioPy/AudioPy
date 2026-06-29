@@ -1,5 +1,5 @@
 """
-Quick Start Test - Run this to verify audiopylib AI Analysis works
+Quick Start Test - Run this to verify audiopy_ai AI Analysis works
 Execute: python quick_test.py
 """
 
@@ -30,16 +30,16 @@ def check_ffmpeg():
     except (subprocess.CalledProcessError, FileNotFoundError, OSError):
         return False
 
-from audiopylib.io import load, save
-from audiopylib.edit import normalize, fade
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.io import load, save
+from audiopy_ai.edit import normalize, fade
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 
 
 def quick_test():
     """Quick functionality test"""
     
     print("\n" + "="*60)
-    print("audiopylib AI Analysis - Quick Test")
+    print("audiopy_ai AI Analysis - Quick Test")
     print("="*60 + "\n")
     
     # Check FFmpeg

@@ -1,5 +1,5 @@
 """
-audiopylib - Audio editing and effects library with AI-powered analysis
+audiopy_ai - Audio editing and effects library with AI-powered analysis
 
 Modules:
     io: Audio file I/O (load, save)
@@ -83,7 +83,7 @@ except ImportError:
     SoundComponentExtractor = None
 
 __version__ = "0.1.5"
-__author__ = "audiopylib Team"
+__author__ = "audiopy_ai Team"
 
 __all__ = [
     # I/O

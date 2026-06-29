@@ -1,5 +1,5 @@
 """
-Interactive audiopylib AI Analysis Tool
+Interactive audiopy_ai AI Analysis Tool
 A user-friendly CLI for testing audio/MP4 files with AI models
 
 Usage: python interactive_test.py
@@ -21,8 +21,8 @@ if sys.platform == 'win32':
 # Add project to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from audiopylib.io import load, save
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.io import load, save
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 
 
 class Colors:
@@ -45,7 +45,7 @@ def print_header(title):
 
 def print_menu():
     """Display main menu"""
-    print_header("audiopylib AI Analysis - Interactive Tool")
+    print_header("audiopy_ai AI Analysis - Interactive Tool")
     
     print(f"{Colors.CYAN}Select an option:{Colors.RESET}\n")
     print("  1️⃣  Analyze MP4/Video File")

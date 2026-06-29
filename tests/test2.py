@@ -7,13 +7,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # --- Import your AudioPy package (make sure it's installed: pip install -e .) ---
-from audiopylib.io import load, save
-from audiopylib.edit import trim, concat, apply_gain, normalize, fade, reverse, rms_db
-from audiopylib.effects.filters import butter_lowpass, butter_highpass, apply_sos_filter
-from audiopylib.effects.reverb import reverb
-from audiopylib.effects.time import time_stretch
+from audiopy_ai.io import load, save
+from audiopy_ai.edit import trim, concat, apply_gain, normalize, fade, reverse, rms_db
+from audiopy_ai.effects.filters import butter_lowpass, butter_highpass, apply_sos_filter
+from audiopy_ai.effects.reverb import reverb
+from audiopy_ai.effects.time import time_stretch
 # NOTE: If you added a pitch_shift module later, you can import it:
-# from audiopylib.effects.pitch import pitch_shift
+# from audiopy_ai.effects.pitch import pitch_shift
 
 # --- Demo configuration ---
 INPUT_PATH = r"Mere Samnewali Khidki Mein Happy Padosan 128 Kbps.mp3"  # <-- put a path here like r"C:\Users\Adarsh\Music\input.mp3"

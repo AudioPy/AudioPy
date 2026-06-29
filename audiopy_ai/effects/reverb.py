@@ -1,4 +1,4 @@
-# audiopylib/effects/reverb.py
+# audiopy_ai/effects/reverb.py
 import numpy as np
 from scipy.signal import fftconvolve
 

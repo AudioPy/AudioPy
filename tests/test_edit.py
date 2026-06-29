@@ -1,6 +1,6 @@
 # tests/test_edit.py
 import numpy as np
-from audiopylib.edit import trim, normalize
+from audiopy_ai.edit import trim, normalize
 
 def test_trim_length():
     sr = 22050

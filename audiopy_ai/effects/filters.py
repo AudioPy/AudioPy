@@ -1,4 +1,4 @@
-# audiopylib/effects/filters.py
+# audiopy_ai/effects/filters.py
 from scipy.signal import butter, sosfilt
 
 def butter_lowpass(sr, cutoff_hz, order=4):

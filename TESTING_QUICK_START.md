@@ -1,4 +1,4 @@
-# 🎬 audiopylib AI Analysis - Quick Start Testing Guide
+# 🎬 audiopy_ai AI Analysis - Quick Start Testing Guide
 
 ## ⚡ Get Started in 5 Minutes
 
@@ -108,7 +108,7 @@ python test_mp4_analysis.py "path/to/your/video.mp4"
 ### Example Output
 ```
 ======================================================================
-audiopylib AI Analysis - MP4 Audio Test
+audiopy_ai AI Analysis - MP4 Audio Test
 ======================================================================
 
 📁 Input File: video.mp4
@@ -159,7 +159,7 @@ python test_mp4_analysis.py video.mp4
 ### Speech Recognition
 Transcribes speech:
 ```python
-from audiopylib.ai_analysis import SoundComponentExtractor
+from audiopy_ai.ai_analysis import SoundComponentExtractor
 analyzer = SoundComponentExtractor(analysis_type="speech_recognition")
 results = analyzer.extract_components("audio.wav")
 ```
@@ -256,7 +256,7 @@ Ensure you're using a supported format: MP4, AVI, MOV, WAV, MP3, FLAC
 
 2. **Smaller Models:** Use for faster processing on CPU
    ```python
-   from audiopylib.ai_analysis import AudioAnalyzer
+   from audiopy_ai.ai_analysis import AudioAnalyzer
    analyzer = AudioAnalyzer(model_name="facebook/wav2vec2-base")
    ```
 
